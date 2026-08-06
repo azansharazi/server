@@ -1,10 +1,19 @@
+using Microsoft.EntityFrameworkCore;
+using server.Data;
+using System.Data.Common;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+
 builder.Services.AddOpenApi();
+//db registering 
+
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DafaultString")));
+
+
 
 var app = builder.Build();
 
