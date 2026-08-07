@@ -11,11 +11,12 @@ namespace server.Models
         public string Status { get; set; } = string.Empty;
         //OwnerShip 
         public int CreatorId { get; set; }
-        public User Creator { get; set; } = new User();
+        public User ?Creator { get; set; } 
         //Project Relation 
         public int ProjectId { get; set; }
-        public Project Project { get; set; } = new Project();
+        public Project ?Project { get; set; }
         // TaskAssigment Telation
-        public ICollection<TaskAssignment> Assignments { get; set; } = new List<TaskAssignment>();
+        public ICollection<TaskAssignment>? Assignments { get; set; } 
+        public ICollection<Comment>? Comments { get; set; } 
     }
 }

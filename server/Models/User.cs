@@ -6,16 +6,16 @@
         public string UserName { get; set; } = string.Empty;
         public string UserEmail { get; set; } = string.Empty;
         // User can Create Multiple Projects 
-       public ICollection<Project> Projects { get; set; } = new List<Project>();
-        // ProjectMamber Relation
-        public ICollection<ProjectMember> ProjectMembers { get; set; } = new List<ProjectMember>();
+       public ICollection<Project>? Projects { get; set; }
+        public ICollection<ProjectMember>? ProjectMembers { get; set; } 
         // User can Create Multiple Tasks 
-       public ICollection<TaskItem> TaskItems { get; set; } = new List<TaskItem>();
+       public ICollection<TaskItem>? TaskItems { get; set; } 
         // Comments
-       public ICollection<Comment> Comments { get; set; } = new List<Comment>();
-        // TaskAssigment Telation
-        public ICollection<TaskAssignment> Assignments { get; set; } = new List<TaskAssignment>();
+       public ICollection<Comment>? Comments { get; set; } 
+        // TaskAssigment Relation
+        public ICollection<TaskAssignment>? Assignments { get; set; } 
+        //UserRoles
 
-
+        public ICollection<UserRole>? UserRoles { get; set; } 
     }
 }

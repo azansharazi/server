@@ -7,10 +7,10 @@
         public string ProjectDescription { get; set; } = string.Empty;
         // Ownership
         public int CreatorId {  get; set; }
-        public User Creator { get; set; } = new User();
+        public User? Creator { get; set; } 
         // Tasks 
-        public ICollection<TaskItem> TaskItems { get; set; } = new List<TaskItem>();
+        public ICollection<TaskItem>? TaskItems { get; set; } 
         // ProjectMamber Relation
-        public ICollection<ProjectMember> ProjectMembers { get; set; } = new List<ProjectMember>();
+        public ICollection<ProjectMember>? ProjectMembers { get; set; }
     }
 }

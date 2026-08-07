@@ -3,9 +3,9 @@
     public class TaskAssignment
     {
         public int UserId { get; set; }
-        public User User { get; set; } = new User();
+        public User? User { get; set; } 
         public int TaskItemId { get; set; }
-        public TaskItem TaskItem { get; set; } = new TaskItem();
-        public DateTime JoinedOn { get; set; } = new DateTime();
+        public TaskItem? TaskItem { get; set; }
+        public DateTime JoinedOn { get; set; } = DateTime.UtcNow;
     }
 }
