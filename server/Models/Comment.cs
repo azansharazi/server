@@ -6,7 +6,7 @@ namespace server.Models
     {
         public int CommentId { get; set; }
         public string Content { get; set; } = string.Empty;
-        public DataTable Created { get; set; }
+        public DateTime Created { get; set; }
         // Task RelationShip
         public int TaskId { get; set; }
         public TaskItem? TaskItem { get; set; } 
