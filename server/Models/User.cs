@@ -5,6 +5,7 @@
         public int UserId { get; set; }
         public string UserName { get; set; } = string.Empty;
         public string UserEmail { get; set; } = string.Empty;
+        public string HashedPassword { get; set; } = string.Empty;
         // User can Create Multiple Projects 
        public ICollection<Project>? Projects { get; set; }
         public ICollection<ProjectMember>? ProjectMembers { get; set; } 
